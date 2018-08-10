@@ -6,7 +6,7 @@ import java.util.Map;
 public class TestingExcelUtil {
 	public static void main(String[] args) {
 		// open the file and create utility object which holds out excel data
-		ExcelUtil excelObject = new ExcelUtil("src/test/resources/com/prestashop/test-data/Products.xlsx", "Sheet1");
+		ExcelUtil excelObject = new ExcelUtil("src/test/resources/com/bnb/test-data/light side.xlsx", "Sheet1");
 		
 		System.out.println("columns "+excelObject.columnCount());
 		System.out.println("row "+excelObject.rowCount());
