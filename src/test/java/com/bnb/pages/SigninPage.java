@@ -21,12 +21,6 @@ public class SigninPage {
 	@FindBy(xpath = "//button[.='sign in']")
 	public WebElement signinButton;
 
-	@FindBy(xpath = "//h1[.='VA']")
-	public WebElement title;
-
-	@FindBy(xpath = "//h2[@class='subtitle']")
-	public WebElement subtitle;
-
 	@FindBy(xpath = "//a[.='my']")
 	public WebElement myButton;
 
