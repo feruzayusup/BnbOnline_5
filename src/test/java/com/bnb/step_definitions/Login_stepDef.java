@@ -31,10 +31,8 @@ public class Login_stepDef {
 		ExcelUtil excelObject = new ExcelUtil(fileLocation, "Sheet1");
 
 		List<Map<String, String>> dataList = excelObject.getDataList();
-		int count = 1;
+		
 		for (Map<String, String> row : dataList) {
-
-			System.out.println(count + " " + row.get("email"));
 
 			loginPage.emailField.sendKeys(row.get("email"));
 
@@ -49,8 +47,6 @@ public class Login_stepDef {
 
 			loginPage.signoutButton.click();
 			BrowserUtils.waitFor(2);
-
-			count++;
 
 		}
 
@@ -93,10 +89,8 @@ public class Login_stepDef {
 		ExcelUtil excelObject = new ExcelUtil(fileLocation, "Sheet1");
 
 		List<Map<String, String>> dataList = excelObject.getDataList();
-		int count = 1;
+		
 		for (Map<String, String> row : dataList) {
-
-			System.out.println(count + " " + row.get("email"));
 
 			loginPage.emailField.sendKeys(row.get("email"));
 
@@ -122,7 +116,6 @@ public class Login_stepDef {
 
 			loginPage.signoutButton.click();
 			BrowserUtils.waitFor(2);
-			count++;
 
 		}
 
