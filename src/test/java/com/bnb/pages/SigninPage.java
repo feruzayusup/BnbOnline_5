@@ -26,6 +26,12 @@ public class SigninPage {
 
 	@FindBy(xpath = "//a[.='self']")
 	public WebElement selfButton;
+
+	@FindBy(xpath = "//h2[@class='subtitle']")
+	public WebElement title;
+
+	@FindBy(xpath = "//a[.='sign out']")
+	public WebElement signoutButton;
 	
 	
 	  public void login(String username, String password ) {

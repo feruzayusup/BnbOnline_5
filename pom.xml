@@ -15,10 +15,14 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
 			<version>3.0.2</version>
 		</dependency>
 
