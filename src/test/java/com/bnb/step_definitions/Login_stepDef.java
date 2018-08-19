@@ -27,7 +27,7 @@ public class Login_stepDef {
 
 	@When("the user signs in with valid username and password")
 	public void the_user_signs_in_with_valid_username_and_password() {
-		String fileLocation = TestConstants.TEST_DATA_FOLDER + "batch8-light.xlsx";
+		String fileLocation = TestConstants.TEST_DATA_FOLDER + "batch8-light (3).xlsx";
 		ExcelUtil excelObject = new ExcelUtil(fileLocation, "Sheet1");
 
 		List<Map<String, String>> dataList = excelObject.getDataList();
@@ -77,7 +77,6 @@ public class Login_stepDef {
 		}
 
 		String password = firstNameLowerCase + lastNameLowerCase;
-		System.out.println(password);
 
 		return password;
 	}

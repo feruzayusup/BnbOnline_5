@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 		},
 		
 		tags="@temp",
-		features="src/test/resources/com/bnb/features", 
+		features="src/test/resources/com.bnb/features", 
 		glue="com/bnb/step_definitions"
 		,dryRun = false
 		)
