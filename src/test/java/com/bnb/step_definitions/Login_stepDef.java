@@ -53,30 +53,18 @@ public class Login_stepDef {
 	}
 
 	public String passwordMaker(String firstName, String lastName) {
-
-		String first = (firstName.substring(0, 1)).toLowerCase() + firstName.substring(1);
-		String last = (lastName.substring(0, 1)).toLowerCase() + lastName.substring(1);
-		String lastNameLowerCase = "";
-		String firstNameLowerCase = "";
-
-		for (int i = 0; i < first.length(); i++) {
-			if (first.charAt(i) < 91) {
-				String letter = (first.charAt(i) + "").toLowerCase();
-				firstNameLowerCase += letter;
+		
+		String str=firstName+lastName;
+		String password="";
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) <=90 && str.charAt(i)>=65) {
+				String letter = (str.charAt(i) + "").toLowerCase();
+				password += letter;
 			} else {
-				firstNameLowerCase += first.charAt(i);
+				password += str.charAt(i);
 			}
 		}
-		for (int i = 0; i < last.length(); i++) {
-			if (last.charAt(i) < 91) {
-				String letter = (last.charAt(i) + "").toLowerCase();
-				lastNameLowerCase += letter;
-			} else {
-				lastNameLowerCase += last.charAt(i);
-			}
-		}
-
-		String password = firstNameLowerCase + lastNameLowerCase;
+		
 
 		return password;
 	}
@@ -84,7 +72,7 @@ public class Login_stepDef {
 	@Then("verify the user information displayed in self menu")
 	public void verify_the_user_information_displayed_in_self_menu() {
 
-		String fileLocation = TestConstants.TEST_DATA_FOLDER + "batch8-light.xlsx";
+		String fileLocation = TestConstants.TEST_DATA_FOLDER + "batch8-light(3).xlsx";
 		ExcelUtil excelObject = new ExcelUtil(fileLocation, "Sheet1");
 
 		List<Map<String, String>> dataList = excelObject.getDataList();
