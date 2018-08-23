@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.bnb.utilities.BrowserUtils;
 import com.bnb.utilities.Driver;
 
 public class SigninPage {
@@ -34,10 +35,11 @@ public class SigninPage {
 	public WebElement signoutButton;
 	
 	
-	  public void login(String username, String password ) {
-		  emailField.sendKeys(username);
+	  public void login(String email, String password ) {
+		  emailField.sendKeys(email);
 		  passwordField.sendKeys(password);
 		  signinButton.click();
+		  BrowserUtils.waitFor(5);
 		 
 	  }
 	

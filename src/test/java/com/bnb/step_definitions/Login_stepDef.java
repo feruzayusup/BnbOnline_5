@@ -33,15 +33,10 @@ public class Login_stepDef {
 		List<Map<String, String>> dataList = excelObject.getDataList();
 		
 		for (Map<String, String> row : dataList) {
-
-			loginPage.emailField.sendKeys(row.get("email"));
-
 			String password = passwordMaker(row.get("first_name"), row.get("last_name"));
-			loginPage.passwordField.sendKeys(password);
-
-			loginPage.signinButton.click();
-			BrowserUtils.waitFor(5);
-
+			String email=row.get("email");
+			loginPage.login(email, password);
+			
 			loginPage.myButton.click();
 			BrowserUtils.waitFor(2);
 
@@ -72,20 +67,16 @@ public class Login_stepDef {
 	@Then("verify the user information displayed in self menu")
 	public void verify_the_user_information_displayed_in_self_menu() {
 
-		String fileLocation = TestConstants.TEST_DATA_FOLDER + "batch8-light(3).xlsx";
+		String fileLocation = TestConstants.TEST_DATA_FOLDER + "batch8-light (3).xlsx";
 		ExcelUtil excelObject = new ExcelUtil(fileLocation, "Sheet1");
 
 		List<Map<String, String>> dataList = excelObject.getDataList();
 		
 		for (Map<String, String> row : dataList) {
 
-			loginPage.emailField.sendKeys(row.get("email"));
-
 			String password = passwordMaker(row.get("first_name"), row.get("last_name"));
-			loginPage.passwordField.sendKeys(password);
-
-			loginPage.signinButton.click();
-			BrowserUtils.waitFor(5);
+			String email=row.get("email");
+			loginPage.login(email, password);
 
 			loginPage.myButton.click();
 			BrowserUtils.waitFor(2);
