@@ -20,10 +20,7 @@ public class Login_stepDef {
 
 	SigninPage loginPage = new SigninPage();
 
-	@Given("the user is on the login page")
-	public void the_user_is_on_the_login_page() {
-		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-	}
+	
 
 	@When("the user signs in with valid username and password")
 	public void the_user_signs_in_with_valid_username_and_password() {
