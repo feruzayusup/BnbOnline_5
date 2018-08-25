@@ -17,7 +17,7 @@ Scenario Outline: Check schedule as a team lead
 		|Teri		|Mapam			|jalabaster7f@drupal.org	|
 		
 		
-Scenario Outline: Check schedule as a tecaher 
+Scenario Outline: Check schedule as a teacher 
 	Given the user is on the login page 
 	When the user enters username "<email>" 
 	Then the user enters "<firstname>" "<lastname>" as password 
