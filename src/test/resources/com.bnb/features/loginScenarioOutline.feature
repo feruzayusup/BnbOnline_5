@@ -1,6 +1,6 @@
 Feature: Sign in functionality with scenario outline
 
-@temp 
+ 
 Scenario Outline: Verify usernames 
 	Given the user is on the login page 
 	When the user enters username "<email>" 

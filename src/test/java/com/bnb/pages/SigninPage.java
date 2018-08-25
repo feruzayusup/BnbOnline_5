@@ -34,6 +34,10 @@ public class SigninPage {
 	@FindBy(xpath = "//a[.='sign out']")
 	public WebElement signoutButton;
 	
+	@FindBy(xpath = "//div[@class='cdk-live-announcer-element cdk-visually-hidden']")
+	public WebElement errorMessage;
+	
+	
 	
 	  public void login(String email, String password ) {
 		  emailField.sendKeys(email);
