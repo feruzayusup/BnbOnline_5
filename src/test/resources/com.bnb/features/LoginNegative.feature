@@ -1,5 +1,5 @@
 Feature: Signing in with invalid password
-@temp
+
 Scenario Outline: Verify error message 
 	Given the user is on the login page 
 	When the user enters username "<email>" 
