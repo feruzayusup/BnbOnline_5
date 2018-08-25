@@ -34,6 +34,48 @@ public class LoginScenarioOutlineStepDefs {
 		BrowserUtils.waitFor(5);
 		
 	}
+	@When("the student enters username {string}")
+	public void the_student_enters_username(String username) {
+		BrowserUtils.waitFor(5);
+		loginPage.emailField.sendKeys(username);
+	}
+
+	@Then("the student enters {string} {string} as password")
+	public void the_student_enters_as_password(String firstName, String lastName) {
+		String password=passwordMaker( firstName, lastName );
+		loginPage.passwordField.sendKeys(password);
+		loginPage.signinButton.click();
+		BrowserUtils.waitFor(5);
+	}
+	
+	@When("the teacher enters username {string}")
+	public void the_teacher_enters_username(String username) {
+		BrowserUtils.waitFor(5);
+		loginPage.emailField.sendKeys(username);
+	}
+
+	@Then("the teacher enters {string} {string} as password")
+	public void the_teacher_enters_as_password(String firstName, String lastName) {
+		String password=passwordMaker( firstName, lastName );
+		loginPage.passwordField.sendKeys(password);
+		loginPage.signinButton.click();
+		BrowserUtils.waitFor(5);
+	}
+	
+	@When("the team-lead enters username {string}")
+	public void the_team_lead_enters_username(String username) {
+		BrowserUtils.waitFor(5);
+		loginPage.emailField.sendKeys(username);  
+	}
+
+	@Then("the team-lead enters {string} {string} as password")
+	public void the_team_lead_enters_as_password(String firstName, String lastName) {
+		String password=passwordMaker( firstName, lastName );
+		loginPage.passwordField.sendKeys(password);
+		loginPage.signinButton.click();
+		BrowserUtils.waitFor(5);
+	}
+
 	
 
 	@Then("go to the self page")

@@ -1,10 +1,10 @@
 Feature: Sign in as Student
 
- @temp
+
 Scenario Outline: Login as student
 	Given the user is on the login page 
-	When the user enters username "<email>" 
-	Then the user enters "<firstname>" "<lastname>" as password 
+	When the student enters username "<email>" 
+	Then the student enters "<firstname>" "<lastname>" as password 
 	And go to the self page
 	Then users full name should be displayed 
 	
