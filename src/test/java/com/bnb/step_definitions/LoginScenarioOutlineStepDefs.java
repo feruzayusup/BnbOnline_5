@@ -28,7 +28,7 @@ public class LoginScenarioOutlineStepDefs {
 
 	@When("the user enters {string} {string} as password")
 	public void the_user_enters_as_password(String firstName, String lastName) {
-		String password=passwordMaker( firstName, lastName );
+		String password= (firstName+lastName).toLowerCase();
 		loginPage.passwordField.sendKeys(password);
 		loginPage.signinButton.click();
 		BrowserUtils.waitFor(5);
@@ -42,7 +42,7 @@ public class LoginScenarioOutlineStepDefs {
 
 	@Then("the student enters {string} {string} as password")
 	public void the_student_enters_as_password(String firstName, String lastName) {
-		String password=passwordMaker( firstName, lastName );
+		String password= (firstName+lastName).toLowerCase();
 		loginPage.passwordField.sendKeys(password);
 		loginPage.signinButton.click();
 		BrowserUtils.waitFor(5);
@@ -56,7 +56,7 @@ public class LoginScenarioOutlineStepDefs {
 
 	@Then("the teacher enters {string} {string} as password")
 	public void the_teacher_enters_as_password(String firstName, String lastName) {
-		String password=passwordMaker( firstName, lastName );
+		String password= (firstName+lastName).toLowerCase();
 		loginPage.passwordField.sendKeys(password);
 		loginPage.signinButton.click();
 		BrowserUtils.waitFor(5);
@@ -70,7 +70,7 @@ public class LoginScenarioOutlineStepDefs {
 
 	@Then("the team-lead enters {string} {string} as password")
 	public void the_team_lead_enters_as_password(String firstName, String lastName) {
-		String password=passwordMaker( firstName, lastName );
+		String password= (firstName+lastName).toLowerCase();
 		loginPage.passwordField.sendKeys(password);
 		loginPage.signinButton.click();
 		BrowserUtils.waitFor(5);
@@ -96,23 +96,5 @@ public class LoginScenarioOutlineStepDefs {
 	}
 
 
-	public String passwordMaker(String firstName, String lastName) {
-		
-//		String str=firstName+lastName;
-//		String password="";
-//		for (int i = 0; i < str.length(); i++) {
-//			if (str.charAt(i) <=90 && str.charAt(i)>=65) {
-//				String letter = (str.charAt(i) + "").toLowerCase();
-//				password += letter;
-//			} else {
-//				password += str.charAt(i);
-//			}
-//		}
-//		
-//
-//		return password;
-		
-		return (firstName+lastName).toLowerCase();
-	}
 
 }
