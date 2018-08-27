@@ -36,7 +36,7 @@ Scenario Outline: Check how many team members user have in the team
 		|Teri		|Mapam			|jalabaster7f@drupal.org	|5			|
 
 @mehmet	
-Scenario Outline: Check how many team members user have in the team
+Scenario Outline: Check if the user is listed in the team
 	Given the user is on the login page 
 	When the user enters username "<email>" 
 	Then the user enters "<firstname>" "<lastname>" as password 
