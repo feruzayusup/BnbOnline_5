@@ -98,19 +98,21 @@ public class LoginScenarioOutlineStepDefs {
 
 	public String passwordMaker(String firstName, String lastName) {
 		
-		String str=firstName+lastName;
-		String password="";
-		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt(i) <=90 && str.charAt(i)>=65) {
-				String letter = (str.charAt(i) + "").toLowerCase();
-				password += letter;
-			} else {
-				password += str.charAt(i);
-			}
-		}
+//		String str=firstName+lastName;
+//		String password="";
+//		for (int i = 0; i < str.length(); i++) {
+//			if (str.charAt(i) <=90 && str.charAt(i)>=65) {
+//				String letter = (str.charAt(i) + "").toLowerCase();
+//				password += letter;
+//			} else {
+//				password += str.charAt(i);
+//			}
+//		}
+//		
+//
+//		return password;
 		
-
-		return password;
+		return (firstName+lastName).toLowerCase();
 	}
 
 }

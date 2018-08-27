@@ -27,6 +27,9 @@ public class SigninPage {
 
 	@FindBy(xpath = "//a[.='self']")
 	public WebElement selfButton;
+	
+	@FindBy(xpath = "//a[.='team']")
+	public WebElement teamButton;
 
 	@FindBy(xpath = "//h2[@class='subtitle']")
 	public WebElement title;

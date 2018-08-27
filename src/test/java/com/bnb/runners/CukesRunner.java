@@ -14,10 +14,10 @@ import cucumber.api.junit.Cucumber;
 		
 		},
 		
-		tags="@temp",
+		tags="@mehmet",
 		features="src/test/resources/com.bnb/features", 
 		glue="com/bnb/step_definitions"
-		,dryRun = false
+//		,dryRun = true
 		)
 public class CukesRunner {
 	
