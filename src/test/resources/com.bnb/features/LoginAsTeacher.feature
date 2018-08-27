@@ -9,7 +9,7 @@ Scenario Outline: login as teacher
 	Then users full name should be displayed 
 	
 	Examples: 
-	|firstname 	|lastname  	|email 			 |  
+	|firstname 	|lastname  	|email 			 	 |  
 	|Mark		|Wohlberg	|teacherva4@gmail.com|
 	|Max		|Payne		|teacherva5@gmail.com|
 	|Sergey		|Brin		|teacherva6@gmail.com|

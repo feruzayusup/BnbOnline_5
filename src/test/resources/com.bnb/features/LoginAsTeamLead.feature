@@ -1,6 +1,6 @@
 Feature: Sign in as Team Lead
 
- @temp
+
 Scenario Outline: sign in as team-lead  
 	Given the user is on the login page 
 	When the team-lead enters username "<email>" 
