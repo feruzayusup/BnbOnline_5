@@ -54,13 +54,7 @@ public class LoginBackendStepDefs {
 		BrowserUtils.waitFor(2);
 		
 		String fname=selfPage.name.getText();
-		System.out.println(fname);
-		
 		String[] fullName = fname.split(" ");
-		
-		
-//		String aFirstname = selfPage.name.getText().split(" ")[0];
-//		String aLastname = selfPage.name.getText().split(" ")[1];
 		String aRole = selfPage.role.getText();
 
 		assertEquals(expectedFirstName, fullName[0]);
