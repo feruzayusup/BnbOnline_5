@@ -1,6 +1,5 @@
 Feature: verify personal information
 
-@temp
 Scenario Outline:
 	Given the user is on the login page 
 	When the user enters username "<email>" 
