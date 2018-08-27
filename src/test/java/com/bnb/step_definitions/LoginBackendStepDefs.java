@@ -22,7 +22,7 @@ public class LoginBackendStepDefs {
 	
 	@Given("user logs in using {string} {string}")
 	public void user_logs_in_using(String username, String password) {
-		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+		//Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 		BrowserUtils.waitFor(2);
 		signInPage.emailField.sendKeys(username);
 		signInPage.passwordField.sendKeys(password);
@@ -41,7 +41,6 @@ public class LoginBackendStepDefs {
 	@Then("user info should match the db records using {string}")
 	public void user_info_should_match_the_db_records_using(String email) {
 		String sql = "select firstname, lastname, role from users where email ='" + email + "';";
-		System.out.println(sql);
 		List<Map<String, Object>> result = DBUtils.getQueryResultMap(sql);
 		
 		assertEquals("More than 1 user with this email " + email, 1, result.size());
